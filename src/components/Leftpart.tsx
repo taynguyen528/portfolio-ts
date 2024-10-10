@@ -1,14 +1,13 @@
-const Leftpart = () => {
+import desktopLogo from "@/assets/img/logo/react.png";
+
+const LeftPart = () => {
     return (
         <div>
             <div className="arlo_tm_leftpart_wrap">
                 <div className="leftpart_inner">
                     <div className="logo_wrap">
                         <a href="#">
-                            <img
-                                src="img/logo/desktop-logo.png"
-                                alt="desktop-logo"
-                            />
+                            <img src={desktopLogo} alt="desktop-logo" />
                         </a>
                     </div>
                     <div className="menu_list_wrap">
@@ -17,19 +16,16 @@ const Leftpart = () => {
                                 <a href="#home">Home</a>
                             </li>
                             <li>
-                                <a href="#about">About</a>
+                                <a href="#about">About </a>
                             </li>
                             <li>
-                                <a href="#services">Services</a>
+                                <a href="#skills">Skill</a>
+                            </li>
+                            <li>
+                                <a href="#project">Project</a>
                             </li>
                             <li>
                                 <a href="#portfolio">Portfolio</a>
-                            </li>
-                            <li>
-                                <a href="#news">News</a>
-                            </li>
-                            <li>
-                                <a href="#contact">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -73,4 +69,4 @@ const Leftpart = () => {
     );
 };
 
-export default Leftpart;
+export default LeftPart;

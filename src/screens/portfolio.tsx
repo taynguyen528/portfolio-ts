@@ -1,7 +1,7 @@
-import Leftpart from "../components/Leftpart";
+import LeftPart from "@/components/LeftPart";
 import MobileMenu from "../components/moblie/Menu";
 import Preloader from "../components/Preloader";
-import Rightpart from "../components/Rightpart";
+import RightPart from "@/components/RightPart";
 
 const Portfolio = () => {
     return (
@@ -22,9 +22,9 @@ const Portfolio = () => {
                 <MobileMenu />
 
                 <div className="arlo_tm_content">
-                    <Leftpart />
+                    <LeftPart />
 
-                    <Rightpart />
+                    <RightPart />
 
                     <a className="arlo_tm_totop" href="#"></a>
                 </div>
