@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, Modal } from "antd";
-
+import { BsArrowRight, BsShopWindow } from "react-icons/bs";
 const Project = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -18,8 +18,8 @@ const Project = () => {
 
     const dataProjects = [
         {
-            image: "img/svg/camera-diaphragm.svg",
-            title: "Grocery-Ecommerce",
+            image: <BsShopWindow size={50} color={"#2bebfd"} />,
+            title: "MERN-Store",
             shortDescription:
                 "Web design is a similar process of creation, with the intention of presenting the content on electronic pages ...",
             detail: {
@@ -113,11 +113,7 @@ const Project = () => {
                                         <li>
                                             <div className="inner">
                                                 <div className="icon">
-                                                    <img
-                                                        className="svg"
-                                                        src={item.image}
-                                                        alt="camera-diaphragm"
-                                                    />
+                                                    {item.image}
                                                 </div>
                                                 <div className="title_service">
                                                     <h3>{item.title}</h3>
@@ -126,6 +122,22 @@ const Project = () => {
                                                     <p>
                                                         {item.shortDescription}
                                                     </p>
+                                                </div>
+                                                <div
+                                                    className="view_detail"
+                                                    style={{ padding: "5px 0" }}
+                                                >
+                                                    <span
+                                                        style={{
+                                                            cursor: "pointer",
+                                                            display: "flex",
+                                                            alignItems:
+                                                                "center",
+                                                        }}
+                                                    >
+                                                        <BsArrowRight />{" "}
+                                                        &nbsp;Xem Chi Tiết
+                                                    </span>
                                                 </div>
                                             </div>
                                         </li>
