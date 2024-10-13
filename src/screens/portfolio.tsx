@@ -2,8 +2,11 @@ import LeftPart from "@/components/LeftPart";
 import MobileMenu from "../components/moblie/Menu";
 import Preloader from "../components/Preloader";
 import RightPart from "@/components/RightPart";
+import { FloatButton } from "antd";
+import { useState } from "react";
 
 const Portfolio = () => {
+    const [hideLeftPard, setHideLeftPard] = useState<boolean>(false);
     return (
         <div>
             <div className="arlo_tm_wrapper_all">
@@ -22,11 +25,17 @@ const Portfolio = () => {
                 <MobileMenu />
 
                 <div className="arlo_tm_content">
-                    <LeftPart />
+                    <LeftPart
+                        hideLeftPard={hideLeftPard}
+                        setHideLeftPard={setHideLeftPard}
+                    />
 
-                    <RightPart />
+                    <RightPart
+                        hideLeftPard={hideLeftPard}
+                        setHideLeftPard={setHideLeftPard}
+                    />
 
-                    <a className="arlo_tm_totop" href="#"></a>
+                    <FloatButton.BackTop tooltip={<div>Scroll to top</div>} />
                 </div>
             </div>
         </div>
